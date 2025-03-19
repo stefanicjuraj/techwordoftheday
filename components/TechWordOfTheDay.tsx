@@ -47,7 +47,7 @@ export default function TechWordOfTheDay() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Merriam-Webster's Word of the Day
+          Merriam-Webster&apos;s Word of the Day
         </a>
         .
       </p>
