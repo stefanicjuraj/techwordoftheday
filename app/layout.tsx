@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tech Word of the Day",
     description: "Daily tech word with definition.",
-    url: "",
+    url: "https://techwordoftheday.vercel.app",
     siteName: "Tech Word of the Day",
     images: [
       {
-        url: "",
+        url: "https://techwordoftheday.vercel.app/assets/images/techwordoftheday.jpg",
         width: 1200,
         height: 630,
       },
