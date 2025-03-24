@@ -31,11 +31,17 @@ export function useTechWordOfTheDay() {
 
         if (words.length > 0) {
           const today = new Date();
-          const dateString = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
-          const seed = dateString
-            .split("")
-            .reduce((acc, char) => acc + char.charCodeAt(0), 0);
-          const index = seed % words.length;
+          const dateString = `${today.getFullYear()}-${
+            today.getMonth() + 1
+          }-${today.getDate()}`;
+
+          let hash = 0;
+          for (let i = 0; i < dateString.length; i++) {
+            hash = (hash << 5) - hash + dateString.charCodeAt(i);
+            hash |= 0;
+          }
+
+          const index = Math.abs(hash) % words.length;
 
           setTechWordOfTheDay(words[index]);
         } else {
