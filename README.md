@@ -1,0 +1,1 @@
+# [Tech Word of the Day](https://techwordoftheday.vercel.app)
