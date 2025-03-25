@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Tech Word of the Day",
@@ -31,6 +32,11 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/assets/icons/techwordoftheday.svg" />
+        <Script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "490a7f7fa3e441eebf4503e48782c0b9"}'
+        />
       </head>
       <body>{children}</body>
     </html>
